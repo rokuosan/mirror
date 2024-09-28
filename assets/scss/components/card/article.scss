@@ -3,14 +3,33 @@ $article-card-date-color: #6c757d;
 
 .article-card {
     padding: 0.7rem 1rem;
+    font-family: serif;
+    font-weight: normal;
 
     h3 {
         font-size: 1.25rem;
         margin: 0;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
-    div {
-        margin: 0;
+    p {
+        margin: 0.5rem 0;
+        color: #343434;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-clamp: 2;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; // Limit the number of lines to show
+        -webkit-box-orient: vertical;
     }
 
     &-header {
@@ -18,7 +37,6 @@ $article-card-date-color: #6c757d;
         justify-content: left;
         align-items: center;
         gap: 0.5rem;
-        margin-bottom: 0.5rem;
     }
 
     &-tag {
