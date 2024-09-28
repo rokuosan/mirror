@@ -1,0 +1,24 @@
+.article-section {
+    h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+
+        &::before {
+            content: '◉';
+            margin-right: 0.5rem;
+        }
+    }
+
+    &-content {
+        padding: 0.5rem 1rem;
+
+        & > * {
+            border-bottom: 1px solid #ddd;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
