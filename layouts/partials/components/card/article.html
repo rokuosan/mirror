@@ -1,7 +1,9 @@
 <div class="article-card">
-  <span class="article-card-date">{{ .Date | time.Format "2006-01-02" }}</span>
-  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ range .Params.tags }}
+  <div class="article-card-header">
+    <span class="article-card-date">{{ .Date | time.Format "2006-01-02" }}</span>
+    {{ range .Params.tags }}
     <span class="article-card-tag">{{ . }}</span>
-  {{ end }}
+    {{ end }}
+  </div>
+  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
 </div>
