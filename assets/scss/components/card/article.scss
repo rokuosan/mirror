@@ -1,4 +1,5 @@
 $article-card-tag-color: #007bff;
+$article-card-date-color: #6c757d;
 
 .article-card {
     padding: 0.7rem 1rem;
@@ -7,33 +8,34 @@ $article-card-tag-color: #007bff;
         font-size: 1.25rem;
         margin: 0;
     }
+
     div {
         margin: 0;
     }
-}
 
-.article-card-header {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
+    &-header {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
 
-.article-card-tag {
-    border: 1px solid $article-card-tag-color;
-    border-radius: 0.25rem;
-    color: $article-card-tag-color;
-    font-size: 0.8rem;
-    padding: 0 0.5rem;
-}
+    &-tag {
+        border: 1px solid $article-card-tag-color;
+        border-radius: 0.25rem;
+        color: $article-card-tag-color;
+        font-size: 0.8rem;
+        padding: 0 0.5rem;
 
-.article-card-tag::before {
-    content: '#';
-}
+        &::before {
+            content: '#';
+        }
+    }
 
-.article-card-date {
-    display: inline-block;
-    color: #6c757d;
-    font-size: 0.9rem;
+    &-date {
+        display: inline-block;
+        color: $article-card-date-color;
+        font-size: 0.9rem;
+    }
 }
