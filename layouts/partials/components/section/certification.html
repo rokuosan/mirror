@@ -1,5 +1,5 @@
-<section class="section">
-  <h2>Certification</h2>
+<section class="section" id="certification">
+  <h2><a href="#certification">Certification</a></h2>
   <div class="section-content">
     {{ range where site.RegularPages.ByDate.Reverse "Type" "certification" }}
       {{ partial "components/card/general.html" . }}
