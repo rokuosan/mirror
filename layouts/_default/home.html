@@ -1,7 +1,10 @@
 {{ define "main" }}
   {{ .Content }}
   {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+    {{ partial "components/card/article.html" . }}
+  {{ end }}
+  <hr>
+  {{ range where site.RegularPages.ByDate "Type" "certification" }}
+    {{ .Title }}
   {{ end }}
 {{ end }}
