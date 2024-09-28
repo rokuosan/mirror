@@ -1,5 +1,5 @@
-<section class="section">
-  <h2>Recent Activities</h2>
+<section class="section" id="recent-activities">
+  <h2><a href="#recent-activities">Recent Activities</a></h2>
   <div class="section-content">
     {{ range where site.RegularPages.ByDate.Reverse "Type" "posts" }}
       {{ partial "components/card/general.html" . }}
