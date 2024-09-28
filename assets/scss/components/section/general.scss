@@ -1,4 +1,6 @@
 .section {
+    margin-bottom: 1.25rem;
+
     a {
         color: inherit;
         text-decoration: none;
@@ -22,7 +24,7 @@
     &-content {
         padding: 0.5rem 1rem;
 
-        & > * {
+        & > .card {
             border-bottom: 1px solid #ddd;
 
             &:last-child {
