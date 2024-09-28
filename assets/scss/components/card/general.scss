@@ -1,7 +1,7 @@
-$article-card-tag-color: #007bff;
-$article-card-date-color: #6c757d;
+$card-tag-color: #007bff;
+$card-date-color: #6c757d;
 
-.article-card {
+.card {
     padding: 0.7rem 1rem;
     font-family: serif;
     font-weight: normal;
@@ -40,9 +40,9 @@ $article-card-date-color: #6c757d;
     }
 
     &-tag {
-        border: 1px solid $article-card-tag-color;
+        border: 1px solid $card-tag-color;
         border-radius: 0.25rem;
-        color: $article-card-tag-color;
+        color: $card-tag-color;
         font-size: 0.8rem;
         padding: 0 0.5rem;
 
@@ -53,7 +53,7 @@ $article-card-date-color: #6c757d;
 
     &-date {
         display: inline-block;
-        color: $article-card-date-color;
+        color: $card-date-color;
         font-size: 0.9rem;
     }
 }
