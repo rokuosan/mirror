@@ -1,0 +1,8 @@
+<section class="article-section">
+  <h2>Certification</h2>
+  <div class="article-section-content">
+    {{ range where site.RegularPages.ByDate.Reverse "Type" "certification" }}
+      {{ partial "components/card/article.html" . }}
+    {{ end }}
+  </div>
+</section>
