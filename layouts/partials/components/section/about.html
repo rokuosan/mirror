@@ -1,8 +1,6 @@
+{{ with .Site.GetPage "about" }}
 <section class="section" id="about">
-  {{ with .Site.GetPage "about" }}
   <h2><a href="#about">{{ .Title }}</a></h2>
-  <div class="section-content">
-      {{ .Content }}
-  </div>
-  {{ end }}
+  {{ .Content }}
 </section>
+{{ end }}
