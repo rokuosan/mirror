@@ -1,0 +1,20 @@
+{{ with .Site.GetPage "profile" }}
+<section id="profile" class="section profile">
+  <img class="profile-avatar" src="{{ .Params.avatar }}" alt="avatar" />
+  <div class="profile-content">
+    <h1 class="profile-name">{{ .Title }}</h1>
+    <span>{{ .Params.Description }}</span>
+
+    <ul class="profile-social">
+      {{ range .Params.social }}
+      <li class="profile-social-item">
+        <i class="fab fa-{{ .icon }}"></i>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+        {{ .name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
