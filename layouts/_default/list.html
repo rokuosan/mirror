@@ -2,8 +2,18 @@
 {{ partial "components/section/profile.html" . }}
 <div class="container">
   <h1>{{ .Title }}</h1>
-  {{ range .Pages }}
-      {{ partial "components/card/general.html" . }}
+  {{ if eq .Kind "taxonomy" }}
+    <ul>
+      {{ range .Pages  }}
+        {{ if not (eq .Name "index") }}
+        <li><a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  {{ else }}
+    {{ range .Pages }}
+        {{ partial "components/card/general.html" . }}
+    {{ end }}
   {{ end }}
 </div>
 {{ end }}
