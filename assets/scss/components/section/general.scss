@@ -1,5 +1,5 @@
 .section {
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
 
     a {
         color: inherit;
@@ -11,12 +11,12 @@
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         font-weight: bold;
         margin: 0;
 
         &::before {
-            content: '◉';
+            content: '❖';
             margin-right: 0.5rem;
         }
     }
